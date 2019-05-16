@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+
+[dev-packages]
+pytest = "*"
+ptvsd = "*"
+importmagic = "*"
+epc = "*"
+autoflake = "*"
+"flake8" = "*"
+python-language-server = {extras = ["all"]}
+ipython = "*"
+
+[requires]
+python_version = "3.5"

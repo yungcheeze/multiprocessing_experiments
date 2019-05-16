@@ -1,10 +1,15 @@
-def an_expensive_task():
-    while True:
-        pass
+from threading import Thread
+
+from expensive_task import an_expensive_task
 
 
 def main():
-    an_expensive_task()
+    threads = [Thread(target=an_expensive_task) for i in range(12)]
+
+    for t in threads:
+        t.start()
+
+    threads[0].join()
 
 
 if __name__ == '__main__':
